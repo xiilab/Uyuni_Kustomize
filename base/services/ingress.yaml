@@ -9,6 +9,13 @@ spec:
     http:
       paths:
       - pathType: Prefix
+        path: "/auth"
+        backend:
+          service:
+            name: keycloak-external
+            port:
+              number: 80
+      - pathType: Prefix
         path: "/api/v1/monitor"
         backend:
           service:

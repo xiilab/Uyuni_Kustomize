@@ -4,3 +4,4 @@ resources:
   - batch-service.yaml
   - monitor-service.yaml
   - ingress.yaml
+  - keycloak-external.yaml
