@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-suite-manager
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-suite-manager
+  template:
+    metadata:
+      labels:
+        app: uyuni-suite-manager
+    spec:
+      containers:
+      - name: uyuni-suite-manager
+        image: harbor.xiilab.com/uyuni-suite/uyuni-suite-manager:latest
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        volumeMounts:
+        - name: kube-config
+          mountPath: "/root/.kube"
+          readOnly: true
+      imagePullSecrets:
+      - name: regcred
+      volumes:
+      - name: kube-config
+        secret:
+          secretName: kube-config

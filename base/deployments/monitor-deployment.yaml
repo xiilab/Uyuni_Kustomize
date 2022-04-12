@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-suite-monitor
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-suite-monitor
+  template:
+    metadata:
+      labels:
+        app: uyuni-suite-monitor
+    spec:
+      containers:
+      - name: uyuni-suite-monitor
+        image: harbor.xiilab.com/uyuni-suite/uyuni-suite-monitor:latest
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+      imagePullSecrets:
+      - name: regcred

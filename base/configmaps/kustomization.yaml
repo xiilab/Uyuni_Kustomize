@@ -1,0 +1,16 @@
+secretGenerator:
+- name: db-user-pass
+  literals:
+  - password=root
+
+configMapGenerator:
+- name: nginx-config
+  files:
+  - nginx.conf 
+- name: initdb-script-config
+  files:
+  - uyuni-initdb-script.sql
+  - batch-initdb-script.sql
+- name: mariadb-config
+  files:
+  - mariadb-custom.cnf

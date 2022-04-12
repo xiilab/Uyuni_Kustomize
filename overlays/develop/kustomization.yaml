@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: uyuni-suite-dev
+
+resources:
+- ../../base/deployments
+- ../../base/services
+- ../../base/configmaps
+- ../../base/secrets
+
+secretGenerator:
+- files:
+  - config
+  name: kube-config
+
+patchesStrategicMerge:
+- manager-deployment-dev.yaml
+- monitor-deployment-dev.yaml
+- batch-deployment-dev.yaml
+
+images:
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-batch
+  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-batch
+  newTag: v0.96
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
+  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
+  newTag: v0.8
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-manager
+  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-manager
+  newTag: v0.96
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-monitor
+  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-monitor
+  newTag: v0.96

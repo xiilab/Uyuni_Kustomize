@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-uyuni-suite
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "uyuni-suite.xiilab.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/api/v1/monitor"
+        backend:
+          service:
+            name: uyuni-suite-monitor
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/api/v1/manager"
+        backend:
+          service:
+            name: uyuni-suite-manager
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/docs/managerDocs.html"
+        backend:
+          service:
+            name: uyuni-suite-manager
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/docs/monitorDocs.html"
+        backend:
+          service:
+            name: uyuni-suite-monitor
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: uyuni-suite-frontend
+            port:
+              number: 80
+

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-suite-frontend
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-suite-frontend
+  template:
+    metadata:
+      labels:
+        app: uyuni-suite-frontend
+    spec:
+      containers:
+      - name: uyuni-suite-frontend
+        image: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend:latest
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /etc/nginx/conf.d
+      imagePullSecrets:
+      - name: regcred
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config
