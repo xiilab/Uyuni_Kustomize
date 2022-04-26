@@ -22,13 +22,13 @@ patchesStrategicMerge:
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-batch
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-batch
-  newTag: v0.99
+  newTag: v0.102
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
   newTag: v0.13
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-manager
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-manager
-  newTag: v0.99
+  newTag: v0.102
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-monitor
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-monitor
-  newTag: v0.99
+  newTag: v0.102
