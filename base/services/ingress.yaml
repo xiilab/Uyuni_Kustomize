@@ -30,17 +30,10 @@ spec:
             port:
               number: 8080
       - pathType: Prefix
-        path: "/docs/managerDocs.html"
+        path: "/docs"
         backend:
           service:
             name: uyuni-suite-manager
-            port:
-              number: 8080
-      - pathType: Prefix
-        path: "/docs/monitorDocs.html"
-        backend:
-          service:
-            name: uyuni-suite-monitor
             port:
               number: 8080
       - pathType: Prefix
