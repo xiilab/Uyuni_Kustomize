@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyuni-suite-batch
+  name: uyuni-manager-batch
 spec:
   selector:
     matchLabels:
-      app: uyuni-suite-batch
+      app: uyuni-manager-batch
   template:
     metadata:
       labels:
-        app: uyuni-suite-batch
+        app: uyuni-manager-batch
     spec:
       containers:
-      - name: uyuni-suite-batch
-        image: harbor.xiilab.com/uyuni-suite/uyuni-suite-batch:latest
+      - name: uyuni-manager-batch
+        image: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch:latest
         ports:
         - name: http
           containerPort: 8080

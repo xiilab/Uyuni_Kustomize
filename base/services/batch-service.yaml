@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: uyuni-suite-batch
+  name: uyuni-manager-batch
 spec:
   ports:
     - name: http
       port: 8080
   selector:
-    app: uyuni-suite-batch
+    app: uyuni-manager-batch
   type: ClusterIP

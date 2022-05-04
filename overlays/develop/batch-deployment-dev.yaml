@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyuni-suite-batch
+  name: uyuni-manager-batch
 spec:
   selector:
     matchLabels:
-      app: uyuni-suite-batch
+      app: uyuni-manager-batch
   template:
     metadata:
       labels:
-        app: uyuni-suite-batch
+        app: uyuni-manager-batch
     spec:
       containers:
-      - name: uyuni-suite-batch
+      - name: uyuni-manager-batch
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev

@@ -19,21 +19,21 @@ spec:
         path: "/api/v1/monitor"
         backend:
           service:
-            name: uyuni-suite-monitor
+            name: uyuni-manager-monitor
             port:
               number: 8080
       - pathType: Prefix
         path: "/api/v1/manager"
         backend:
           service:
-            name: uyuni-suite-manager
+            name: uyuni-manager-core
             port:
               number: 8080
       - pathType: Prefix
         path: "/docs"
         backend:
           service:
-            name: uyuni-suite-manager
+            name: uyuni-manager-core
             port:
               number: 8080
       - pathType: Prefix

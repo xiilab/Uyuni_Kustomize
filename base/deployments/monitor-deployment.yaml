@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyuni-suite-monitor
+  name: uyuni-manager-monitor
 spec:
   selector:
     matchLabels:
-      app: uyuni-suite-monitor
+      app: uyuni-manager-monitor
   template:
     metadata:
       labels:
-        app: uyuni-suite-monitor
+        app: uyuni-manager-monitor
     spec:
       containers:
-      - name: uyuni-suite-monitor
-        image: harbor.xiilab.com/uyuni-suite/uyuni-suite-monitor:latest
+      - name: uyuni-manager-monitor
+        image: harbor.xiilab.com/uyuni-suite/uyuni-manager-monitor:latest
         ports:
         - name: http
           containerPort: 8080

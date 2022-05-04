@@ -20,15 +20,15 @@ patchesStrategicMerge:
 - batch-deployment-dev.yaml
 
 images:
-- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-batch
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-batch
   newTag: v0.110
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
   newTag: v0.25
-- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-manager
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-manager
   newTag: v0.110
-- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-monitor
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-monitor
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-monitor
   newTag: v0.110

@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyuni-suite-manager
+  name: uyuni-manager-core
 spec:
   selector:
     matchLabels:
-      app: uyuni-suite-manager
+      app: uyuni-manager-core
   template:
     metadata:
       labels:
-        app: uyuni-suite-manager
+        app: uyuni-manager-core
     spec:
       containers:
-      - name: uyuni-suite-manager
+      - name: uyuni-manager-core
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev

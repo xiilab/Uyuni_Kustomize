@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyuni-suite-monitor
+  name: uyuni-manager-monitor
 spec:
   selector:
     matchLabels:
-      app: uyuni-suite-monitor
+      app: uyuni-manager-monitor
   template:
     metadata:
       labels:
-        app: uyuni-suite-monitor
+        app: uyuni-manager-monitor
     spec:
       containers:
-      - name: uyuni-suite-monitor
+      - name: uyuni-manager-monitor
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev
