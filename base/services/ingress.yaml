@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-uyuni-suite
+  annotations:
+    nginx.org/websocket-services: "uyuni-manager-websocket"
 spec:
   ingressClassName: nginx
   rules:
@@ -43,4 +45,10 @@ spec:
             name: uyuni-suite-frontend
             port:
               number: 80
-
+      - pathType: Prefix
+        path: "/terminal"
+        backend:
+          service:
+            name: uyuni-manager-websocket
+            port:
+              number: 8080
