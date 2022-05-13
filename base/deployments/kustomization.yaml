@@ -4,3 +4,4 @@ resources:
   - core-deployment.yaml
   - monitor-deployment.yaml
   - batch-deployment.yaml
+  - websocket-deployment.yaml

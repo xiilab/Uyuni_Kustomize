@@ -3,5 +3,6 @@ resources:
   - core-service.yaml
   - batch-service.yaml
   - monitor-service.yaml
+  - websocket-service.yaml
   - ingress.yaml
   - keycloak-external.yaml
