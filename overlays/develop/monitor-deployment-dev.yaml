@@ -20,7 +20,7 @@ spec:
           value: http://prometheus-kube-prometheus-prometheus.prometheus.svc:9090
         - name: KEYCLOAK_REALM
           value: uyuni
-        - name: KEYCLOAK_AUTH-SERVER-URL
+        - name: KEYCLOAK_AUTHSERVERURL
           value: http://keycloak-http.keycloak.svc/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni-backend
