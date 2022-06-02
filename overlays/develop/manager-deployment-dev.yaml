@@ -16,9 +16,3 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev
-        - name: KEYCLOAK_REALM
-          value: uyuni
-        - name: KEYCLOAK_AUTHSERVERURL
-          value: http://keycloak-http.keycloak.svc/auth
-        - name: KEYCLOAK_RESOURCE
-          value: uyuni-backend
