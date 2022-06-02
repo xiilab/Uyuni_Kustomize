@@ -21,4 +21,4 @@ spec:
         - name: KEYCLOAK_AUTHSERVERURL
           value: http://keycloak-http.keycloak.svc/auth
         - name: KEYCLOAK_RESOURCE
-          value: uyuni-backend
+          value: uyuni
