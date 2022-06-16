@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-uyuni-suite
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "1tb"
+    nginx.org/client-max-body-size: "1tb"
     nginx.org/websocket-services: "uyuni-manager-websocket"
 spec:
   ingressClassName: nginx
