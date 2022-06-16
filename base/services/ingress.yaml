@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-uyuni-suite
   annotations:
+    nginx.org/client-max-body-size: "0"
     nginx.org/websocket-services: "uyuni-manager-websocket"
 spec:
   ingressClassName: nginx
