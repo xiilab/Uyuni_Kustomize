@@ -34,6 +34,13 @@ spec:
             port:
               number: 8080
       - pathType: Prefix
+        path: "/terminal"
+        backend:
+          service:
+            name: uyuni-manager-websocket
+            port:
+              number: 8080
+      - pathType: Prefix
         path: "/docs/monitorDocs.html"
         backend:
           service:
@@ -54,10 +61,3 @@ spec:
             name: uyuni-suite-frontend
             port:
               number: 80
-      - pathType: Prefix
-        path: "/terminal"
-        backend:
-          service:
-            name: uyuni-manager-websocket
-            port:
-              number: 8080
