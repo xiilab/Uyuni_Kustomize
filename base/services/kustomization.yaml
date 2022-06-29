@@ -4,5 +4,6 @@ resources:
   - batch-service.yaml
   - monitor-service.yaml
   - websocket-service.yaml
+  - noti-service.yaml
   - ingress.yaml
   - keycloak-external.yaml

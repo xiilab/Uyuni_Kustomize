@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-manager-noti
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-manager-noti
+  template:
+    metadata:
+      labels:
+        app: uyuni-manager-noti
+    spec:
+      containers:
+      - name: uyuni-manager-noti
+        image: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti:latest
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+      imagePullSecrets:
+      - name: regcred
