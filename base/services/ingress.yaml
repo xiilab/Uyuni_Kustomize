@@ -6,6 +6,7 @@ metadata:
     nginx.org/client-max-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.org/websocket-services: "uyuni-manager-websocket"
+    nginx.ingress.kubernetes.io/eventsource: "true"
 spec:
   ingressClassName: nginx
   rules:
