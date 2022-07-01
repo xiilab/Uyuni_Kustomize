@@ -8,6 +8,7 @@ metadata:
     nginx.org/websocket-services: "uyuni-manager-websocket"
     nginx.ingress.kubernetes.io/eventsource: "true"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "21600"
+    nginx.org/proxy-read-timeout: "21600"
 spec:
   ingressClassName: nginx
   rules:
