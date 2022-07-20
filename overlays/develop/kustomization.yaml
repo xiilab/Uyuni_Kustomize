@@ -21,6 +21,7 @@ patchesStrategicMerge:
 - batch-deployment-dev.yaml
 - websocket-deployment-dev.yaml
 - noti-deployment-dev.yaml
+- uyuni-suite-pv.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch

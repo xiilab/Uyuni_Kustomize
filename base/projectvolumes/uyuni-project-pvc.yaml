@@ -2,10 +2,11 @@ apiVersion: v1
 kind : PersistentVolumeClaim
 metadata:
   name: uyuni-pvc
+  namespace: uyuni
 spec:
-  storageClassName: "nfs-client"
+  storageClassName: uyuni-project
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
-      storage: 20G
+      storage: 1G

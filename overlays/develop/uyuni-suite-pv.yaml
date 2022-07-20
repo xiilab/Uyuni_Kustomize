@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: uyuni-suite-pv
+spec:
+  nfs:
+    path: /kube_storage/uyuni-data
+    server: 192.168.2.27

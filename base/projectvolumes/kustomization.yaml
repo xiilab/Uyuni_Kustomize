@@ -1,0 +1,5 @@
+namespace: uyuni
+
+resources:
+  - uyuni-project-pv.yaml
+  - uyuni-project-pvc.yaml
