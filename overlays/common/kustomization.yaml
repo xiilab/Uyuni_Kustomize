@@ -5,3 +5,6 @@ namespace: uyuni
 
 resources:
 - ../../base/projectvolumes
+
+patchesStrategicMerge:
+- uyuni-project-pv.yaml
