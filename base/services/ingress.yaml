@@ -44,7 +44,7 @@ spec:
             port:
               number: 8080
       - pathType: Prefix
-        path: "/terminal"
+        path: "/manager/ws/terminal"
         backend:
           service:
             name: uyuni-manager-websocket
