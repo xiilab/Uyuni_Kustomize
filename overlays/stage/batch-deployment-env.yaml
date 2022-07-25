@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-manager-batch
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-manager-batch
+  template:
+    metadata:
+      labels:
+        app: uyuni-manager-batch
+    spec:
+      containers:
+      - name: uyuni-manager-batch
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: dev
+        - name: KEYCLOAK_REALM
+          value: uyuni
+        - name: KEYCLOAK_AUTHSERVERURL
+          value: http://uyuni-suite.xiilab.com/auth
+        - name: KEYCLOAK_RESOURCE
+          value: uyuni
+        - name: KEYCLOAK_PROXYURL
+          value: http://keycloak-http.keycloak.svc/auth

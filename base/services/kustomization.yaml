@@ -2,8 +2,6 @@ resources:
   - frontend-service.yaml
   - core-service.yaml
   - batch-service.yaml
-  - monitor-service.yaml
-  - websocket-service.yaml
   - noti-service.yaml
   - ingress.yaml
   - keycloak-external.yaml
