@@ -28,15 +28,9 @@ images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newTag: v0.290-dev
-- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-monitor
-  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-monitor
-  newTag: v0.287-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
   newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
   newTag: v0.290-dev
-- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-websocket
-  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-websocket
-  newTag: v0.287-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
   newTag: v0.134
