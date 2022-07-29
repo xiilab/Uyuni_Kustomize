@@ -44,7 +44,7 @@ spec:
             port:
               number: 8080
       - pathType: Prefix
-        path: "/manager/ws/terminal"
+        path: "/manager/ws"
         backend:
           service:
             name: uyuni-manager-core
