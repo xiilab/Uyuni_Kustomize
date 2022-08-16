@@ -35,7 +35,7 @@ spec:
           mountPath: "/root/.kube"
           readOnly: true
         - name: uyuni-pvc
-          mountPath: "/uyuni"
+          mountPath: "/root/uyuni"
       imagePullSecrets:
       - name: regcred
       volumes:
