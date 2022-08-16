@@ -33,4 +33,4 @@ images:
   newTag: v0.321-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
-  newTag: v0.172
+  newTag: v0.173
