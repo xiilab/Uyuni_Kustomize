@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-manager-batch
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-manager-batch
+  template:
+    metadata:
+      labels:
+        app: uyuni-manager-batch
+    spec:
+      hostAliases:
+      - ip: "192.168.2.150"
+        hostnames:
+        - "bigdata-car.kr"
+      containers:
+      - name: uyuni-manager-batch
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: dev
+        - name: KEYCLOAK_REALM
+          value: uyuni
+        - name: KEYCLOAK_AUTHSERVERURL
+          value: http://bigdata-car.kr/auth
+        - name: KEYCLOAK_RESOURCE
+          value: uyuni
+
