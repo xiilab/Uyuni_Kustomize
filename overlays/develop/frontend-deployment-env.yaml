@@ -17,17 +17,17 @@ spec:
         - name: REACT_APP_NAME
           value: Uyuni Suite
         - name: REACT_APP_BACKEND_HOST
-          value: http://uyuni.bigdata-car.kr
+          value: http://uyuni-suite.xiilab.com
         - name: REACT_APP_BASE_URL
           value: api/v1
         - name: REACT_APP_KEYCLOAK_HOST
-          value: http://uyuni.bigdata-car.kr
+          value: http://uyuni-suite.xiilab.com
         - name: REACT_APP_KEYCLOAK_URL
-          value: http://uyuni.bigdata-car.kr/auth/
+          value: http://uyuni-suite.xiilab.com/auth/
         - name: REACT_APP_KEYCLOAK_REALM
           value: uyuni
         - name: REACT_APP_KEYCLOAK_CLIENT_ID
           value: uyuni
         - name: REACT_APP_SSE_HOST
-          value: http://uyuni.bigdata-car.kr
+          value: http://uyuni-suite.xiilab.com
 
