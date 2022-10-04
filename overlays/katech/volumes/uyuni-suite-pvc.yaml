@@ -1,0 +1,11 @@
+apiVersion: v1
+kind : PersistentVolumeClaim
+metadata:
+  name: uyuni-pvc
+spec:
+  storageClassName: uyuni-suite-katech
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100G
