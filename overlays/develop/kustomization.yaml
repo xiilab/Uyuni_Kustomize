@@ -19,7 +19,6 @@ patchesStrategicMerge:
 - core-deployment-env.yaml
 - batch-deployment-env.yaml
 - noti-deployment-env.yaml
-- frontend-deployment-env.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
