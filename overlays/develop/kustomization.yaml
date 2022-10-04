@@ -16,9 +16,9 @@ secretGenerator:
   name: kube-config
 
 patchesStrategicMerge:
-- manager-deployment-dev.yaml
-- batch-deployment-dev.yaml
-- noti-deployment-dev.yaml
+- core-deployment-env.yaml
+- batch-deployment-env.yaml
+- noti-deployment-env.yaml
 - uyuni-suite-pv.yaml
 
 images:
