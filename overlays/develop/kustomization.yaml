@@ -8,7 +8,7 @@ resources:
 - ../../base/services
 - ../../base/configmaps
 - ../../base/secrets
-- ../../base/volumes
+- volumes
 
 secretGenerator:
 - files:
@@ -19,7 +19,6 @@ patchesStrategicMerge:
 - core-deployment-env.yaml
 - batch-deployment-env.yaml
 - noti-deployment-env.yaml
-- uyuni-suite-pv.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
