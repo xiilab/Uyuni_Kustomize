@@ -38,4 +38,4 @@ images:
   newTag: 0.399-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newTag: 0.7-katech
+  newTag: 0.8-katech
