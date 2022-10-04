@@ -26,7 +26,3 @@ spec:
           value: http://bigdata-car.kr/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
-        volumeMounts:
-        - name: uyuni-pvc
-          mountPath: "/root/uyuni"
-          subPath: "katech"
