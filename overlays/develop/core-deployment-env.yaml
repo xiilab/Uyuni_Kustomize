@@ -26,3 +26,5 @@ spec:
           value: http://uyuni-suite.xiilab.com/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
+        - name: K8S_NAMESPACE
+          value: uyuni-suite-develop
