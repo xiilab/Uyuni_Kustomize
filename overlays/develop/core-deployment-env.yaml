@@ -28,3 +28,5 @@ spec:
           value: uyuni
         - name: K8S_NAMESPACE
           value: uyuni-suite-develop
+        - name: UYUNIHOST
+          value: 192.168.2.141
