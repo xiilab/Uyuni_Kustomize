@@ -29,4 +29,4 @@ spec:
         - name: K8S_NAMESPACE
           value: uyuni-suite-katech
         - name: UYUNIHOST
-          value: 192.168.1.210 # host change
+          value: 192.168.1.238 # host change
