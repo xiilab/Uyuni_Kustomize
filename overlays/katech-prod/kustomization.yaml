@@ -1,0 +1,46 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: uyuni-suite-katech
+
+resources:
+- ../../base/deployments
+- ../../base/services
+- ../../base/configmaps
+- volumes
+
+secretGenerator:
+- name: kube-config
+  files:
+  - config
+- name: regcred
+  files:
+  - .dockerconfigjson
+  type: kubernetes.io/dockerconfigjson  
+
+patchesStrategicMerge:
+- core-deployment-env.yaml
+- batch-deployment-env.yaml
+- noti-deployment-env.yaml
+- frontend-deployment-env.yaml
+- mariadb-deployment-env.yaml
+
+patchesJson6902:
+- path: ingress-patch.yaml
+  target:
+    kind: Ingress
+    name: ingress-uyuni-suite
+
+images:
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
+  newName: xiilab/uyuni-manager-batch
+  newTag: 0.38-katech
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
+  newName: xiilab/uyuni-manager-core
+  newTag: 0.38-katech
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
+  newName: xiilab/uyuni-manager-noti
+  newTag: 0.38-katech
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
+  newName: xiilab/uyuni-suite-frontend
+  newTag: 0.90-katech
