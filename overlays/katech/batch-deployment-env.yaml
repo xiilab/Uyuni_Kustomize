@@ -12,7 +12,7 @@ spec:
         app: uyuni-manager-batch
     spec:
       hostAliases:
-      - ip: "192.168.1.210" # host change
+      - ip: "192.168.1.238" # host change
         hostnames:
         - "bigdata-car.kr" # host change
       containers:
