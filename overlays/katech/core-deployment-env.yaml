@@ -14,7 +14,7 @@ spec:
       hostAliases:
       - ip: "192.168.1.210"
         hostnames:
-        - "uyuni.bigdata-car.kr" # host change
+        - "bigdata-car.kr" # host change
       containers:
       - name: uyuni-manager-core
         env:
@@ -23,7 +23,7 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://uyuni.bigdata-car.kr/auth # host change
+          value: http://bigdata-car.kr:32080/auth # host change
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE
