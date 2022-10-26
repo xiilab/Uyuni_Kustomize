@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak-postgres-daemon
+spec:
+  selector:
+    matchLabels:
+      app: keycloak-postgres-daemon
+  template:
+    metadata:
+      labels:
+        app: keycloak-postgres-daemon
+    spec:
+      hostAliases:
+      - ip: "10.10.10.37"
+        hostnames:
+        - "bigdata-car.kr"            
+      containers:
+      - name: keycloak-postgres-daemon
+        image: xiilab/katech-postgres-daemon:latest
+        env:
+        - name: UYUNI_URL
+          value: http://bigdata-car.kr:32080
+        - name: ADMIN_USER_NAME
+          value: admin
+        - name: ADMIN_PASSWORD
+          value: uyuni
+        - name: DATABASE_USER
+          value: dpmanager
+        - name: DATABASE_PASS
+          value: "hello.dp12#$"
+        - name: DATABASE_HOST
+          value: 10.10.20.60
+        - name: DATABASE_PORT
+          value: "5432"
+        - name: DATABASE_NAME
+          value: dataportal
+        - name: USER_GROUP_NAME
+          value: katech
+      nodeSelector:
+        kubernetes.io/hostname: master03
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"          
+      imagePullSecrets:
+      - name: regcred

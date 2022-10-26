@@ -30,6 +30,8 @@ spec:
           value: uyuni-suite-katech
         - name: UYUNIHOST
           value: bigdata-car.kr # host change
+        - name: ADMIN_PASSWORD
+          value: uyuni
       nodeSelector:
         kubernetes.io/hostname: master03
       tolerations:

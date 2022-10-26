@@ -28,6 +28,8 @@ spec:
           value: uyuni
         - name: K8S_NAMESPACE
           value: uyuni-suite-katech
+        - name: ADMIN_PASSWORD
+          value: uyuni
       nodeSelector:
         kubernetes.io/hostname: master03
       tolerations:

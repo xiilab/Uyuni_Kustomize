@@ -8,6 +8,7 @@ resources:
 - ../../base/services
 - ../../base/configmaps
 - volumes
+- postgres-keycloak-sync.yaml 
 
 secretGenerator:
 - name: kube-config
@@ -34,13 +35,16 @@ patchesJson6902:
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
   newName: xiilab/uyuni-manager-batch
-  newTag: 0.38-katech
+  newTag: 0.60-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newName: xiilab/uyuni-manager-core
-  newTag: 0.38-katech
+  newTag: 0.60-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
   newName: xiilab/uyuni-manager-noti
-  newTag: 0.38-katech
+  newTag: 0.60-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newName: xiilab/uyuni-suite-frontend
-  newTag: 0.90-katech
+  newName: xiilab/front-end
+  newTag: "0.1.5"
+- name: xiilab/katech-postgres-daemon:latest
+  newName: xiilab/katech-postgres-daemon
+  newTag: "0.3"
