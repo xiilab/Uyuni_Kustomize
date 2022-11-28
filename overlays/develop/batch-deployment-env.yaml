@@ -11,10 +11,10 @@ spec:
       labels:
         app: uyuni-manager-batch
     spec:
-#      hostAliases:
-#      - ip: "192.168.2.150"
-#        hostnames:
-#        - "uyuni-suite.xiilab.com"
+      hostAliases:
+      - ip: "192.168.2.150"
+        hostnames:
+        - "dev.uyuni-suite.xiilab.com"
       containers:
       - name: uyuni-manager-batch
         env:
@@ -23,7 +23,7 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://uyuni-suite.xiilab.com:40080/auth
+          value: http://dev.uyuni-suite.xiilab.com/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE
