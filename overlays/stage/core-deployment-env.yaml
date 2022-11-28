@@ -11,6 +11,10 @@ spec:
       labels:
         app: uyuni-manager-core
     spec:
+#      hostAliases:
+#      - ip: "192.168.2.150"
+#        hostnames:
+#        - "uyuni-suite.xiilab.com"
       containers:
       - name: uyuni-manager-core
         env:
@@ -19,8 +23,10 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://uyuni-suite.xiilab.com/auth
+          value: http://uyuni-suite.xiilab.com:40080/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
-        - name: KEYCLOAK_PROXYURL
-          value: http://keycloak-http.keycloak.svc/auth
+        - name: K8S_NAMESPACE
+          value: uyuni-suite
+        - name: UYUNIHOST
+          value: 192.168.1.235

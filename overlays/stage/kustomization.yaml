@@ -1,14 +1,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: uyuni-suite-stage
+namespace: uyuni-suite
 
 resources:
 - ../../base/deployments
 - ../../base/services
 - ../../base/configmaps
 - ../../base/secrets
-- ../../base/volumes
+- volumes
 
 secretGenerator:
 - files:
@@ -16,28 +16,20 @@ secretGenerator:
   name: kube-config
 
 patchesStrategicMerge:
-- manager-deployment-dev.yaml
-- monitor-deployment-dev.yaml
-- batch-deployment-dev.yaml
-- websocket-deployment-dev.yaml
-- noti-deployment-dev.yaml
+- core-deployment-env.yaml
+- batch-deployment-env.yaml
+- noti-deployment-env.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-manager-batch
-  newTag: v0.262
+  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
+  newTag: 0.479-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-manager-core
-  newTag: v0.262
-- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-monitor
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-manager-monitor
-  newTag: v0.262
+  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
+  newTag: 0.479-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-manager-noti
-  newTag: v0.262
-- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-websocket
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-manager-websocket
-  newTag: v0.262
+  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
+  newTag: 0.479-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newName: harbor.xiilab.com/uyuni-suite-dev/uyuni-suite-frontend
-  newTag: v0.118
+  newName: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
+  newTag: 0.404-dev
