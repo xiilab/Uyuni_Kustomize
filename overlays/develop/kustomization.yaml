@@ -21,10 +21,10 @@ patchesStrategicMerge:
 - noti-deployment-env.yaml
 
 patchesJson6902:
-- target:
+- path: ingress-patch.yaml
+  target:
     kind: Ingress
     name: ingress-uyuni-suite
-  path: ingress-patch.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
@@ -38,4 +38,4 @@ images:
   newTag: 0.481-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newTag: 0.407-dev
+  newTag: 0.415-dev
