@@ -20,11 +20,11 @@ patchesStrategicMerge:
 - batch-deployment-env.yaml
 - noti-deployment-env.yaml
 
-patches:
+patchesJson6902:
 - target:
     kind: Ingress
     name: ingress-uyuni-suite
-  path: ingress-patch.json
+  path: ingress-patch.yaml
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
