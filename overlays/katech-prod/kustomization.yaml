@@ -18,6 +18,11 @@ secretGenerator:
   files:
   - .dockerconfigjson
   type: kubernetes.io/dockerconfigjson  
+- files:
+    - tls.crt=tls/unified.bigdata-car.kr.crt
+    - tls.key=tls/key.unencrypted.pem
+  name: bigdata-tls
+  type: kubernetes.io/tls  
 
 patchesStrategicMerge:
 - core-deployment-env.yaml
@@ -25,6 +30,7 @@ patchesStrategicMerge:
 - noti-deployment-env.yaml
 - frontend-deployment-env.yaml
 - mariadb-deployment-env.yaml
+  #- ingress-tls.yaml
 
 patchesJson6902:
 - path: ingress-patch.yaml
@@ -35,16 +41,18 @@ patchesJson6902:
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
   newName: xiilab/uyuni-manager-batch
-  newTag: 0.60-katech
+  newTag: 0.85-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newName: xiilab/uyuni-manager-core
-  newTag: 0.60-katech
+  newTag: 0.85-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
   newName: xiilab/uyuni-manager-noti
-  newTag: 0.60-katech
+  newTag: 0.85-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newName: xiilab/front-end
-  newTag: "0.1.5"
+  # newName: xiilab/front-end
+  # newTag: "0.1.7"
+  newName: xiilab/uyuni-suite-frontend
+  newTag: "0.137-katech"
 - name: xiilab/katech-postgres-daemon:latest
   newName: xiilab/katech-postgres-daemon
-  newTag: "0.3"
+  newTag: "0.8"
