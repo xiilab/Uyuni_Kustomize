@@ -1,0 +1,11 @@
+apiVersion: v1
+kind : PersistentVolumeClaim
+metadata:
+  name: katech-dataset-pvc
+spec:
+  storageClassName: katech-dataset
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100G

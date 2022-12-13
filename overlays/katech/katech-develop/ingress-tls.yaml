@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-uyuni-suite
+  annotations:
+    nginx.org/client-max-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.org/websocket-services: "uyuni-manager-core"
+    nginx.ingress.kubernetes.io/eventsource: "true"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "21600"
+    nginx.org/proxy-read-timeout: "21600"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - bigdata-car.kr
+    secretName: bigdata-tls

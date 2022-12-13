@@ -1,0 +1,4 @@
+resources:
+  - uyuni-suite-pvc.yaml
+  - katech-dataset-pv.yaml
+  - katech-dataset-pvc.yaml
