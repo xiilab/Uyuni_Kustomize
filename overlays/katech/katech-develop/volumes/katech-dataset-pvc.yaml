@@ -3,7 +3,7 @@ kind : PersistentVolumeClaim
 metadata:
   name: katech-dataset-pvc
 spec:
-  storageClassName: katech-dataset
+  storageClassName: katech-dataset-dev
   accessModes:
     - ReadWriteMany
   resources:

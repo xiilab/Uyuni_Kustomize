@@ -4,11 +4,10 @@ kind: Kustomization
 namespace: uyuni-suite-katech-dev
 
 resources:
-- ../../base/deployments
-- ../../base/services
-- ../../base/configmaps
+- ../../../base/deployments
+- ../../../base/services
+- ../../../base/configmaps
 - volumes
-- postgres-keycloak-sync.yaml
 
 secretGenerator:
 - files:
@@ -30,7 +29,7 @@ patchesStrategicMerge:
 - noti-deployment-env.yaml
 - frontend-deployment-env.yaml
 - mariadb-deployment-env.yaml
-  #- ingress-tls.yaml
+- ingress-tls.yaml
 
 patchesJson6902:
 - path: ingress-patch.yaml

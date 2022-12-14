@@ -14,7 +14,7 @@ spec:
       hostAliases:
       - ip: "10.10.10.37" # host change
         hostnames:
-        - "bigdata-car.kr" # host change
+        - "dev.bigdata-car.kr" # host change
       containers:
       - name: uyuni-manager-batch
         env:
@@ -23,7 +23,7 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://bigdata-car.kr:32080/auth
+          value: http://dev.bigdata-car.kr:32080/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE

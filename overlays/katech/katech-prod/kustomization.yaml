@@ -4,9 +4,9 @@ kind: Kustomization
 namespace: uyuni-suite-katech
 
 resources:
-- ../../base/deployments
-- ../../base/services
-- ../../base/configmaps
+- ../../../base/deployments
+- ../../../base/services
+- ../../../base/configmaps
 - volumes
 - postgres-keycloak-sync.yaml
 
