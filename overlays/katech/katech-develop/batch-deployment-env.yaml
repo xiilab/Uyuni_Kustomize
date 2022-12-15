@@ -23,7 +23,7 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://dev.bigdata-car.kr:32080/auth
+          value: https://dev.bigdata-car.kr:32443/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE
