@@ -4,16 +4,16 @@
 
 ## 디렉토리 구조
 ```
-├── base -> base가 되는 매니패스트 파일들이 들어 있는 폴더
-│   ├── configmaps -> mariadb, nginx web proxy설정이 들어있는 폴더
-│   ├── deployments -> 우유니 스위트 모듈들을 배포할 수 있는 쿠버네티스 deployment가 들어있는 폴더
-│   ├── secrets -> harbor접속 .dockerconfig secret파일 들어있음.
-│   ├── services -> 우유니 스위트 쿠버네티스 서비스 파일 들어있는 폴더.
-│   └── volumes -> 우유니 스위트에서 사용하는 pvc, pv 들어 있는 폴더.
-└── overlays -> 각 환경별로 다르게 배포할 수 있는 폴더
-    ├── develop -> 우유니 스위트 develop 환경 배포
+├── base             -> base가 되는 매니패스트 파일들이 들어 있는 폴더
+│   ├── configmaps   -> mariadb, nginx web proxy설정이 들어있는 폴더
+│   ├── deployments  -> 우유니 스위트 모듈들을 배포할 수 있는 쿠버네티스 deployment가 들어있는 폴더
+│   ├── secrets      -> harbor접속 .dockerconfig secret파일 들어있음.
+│   ├── services     -> 우유니 스위트 쿠버네티스 서비스 파일 들어있는 폴더.
+│   └── volumes      -> 우유니 스위트에서 사용하는 pvc, pv 들어 있는 폴더.
+└── overlays         -> 각 환경별로 다르게 배포할 수 있는 폴더
+    ├── develop      -> 우유니 스위트 develop 환경 배포
     ├── katech 
-    └── stage -> 우유니 스위트 staging 환경 배포
+    └── stage        -> 우유니 스위트 staging 환경 배포
 ```
 
 ## 명령어
