@@ -1,0 +1,41 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: uyuni-suite-develop
+
+resources:
+- ../../base/deployments
+- ../../base/services
+- ../../base/configmaps
+- ../../base/secrets
+- volumes
+
+secretGenerator:
+- files:
+  - config
+  name: kube-config
+
+patchesStrategicMerge:
+- core-deployment-env.yaml
+- batch-deployment-env.yaml
+- noti-deployment-env.yaml
+
+patchesJson6902:
+- path: ingress-patch.yaml
+  target:
+    kind: Ingress
+    name: ingress-uyuni-suite
+
+images:
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
+  newName: xiilab/uyuni-manager-batch
+  newTag: 0.2.2-stag
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
+  newName: xiilab/uyuni-manager-core
+  newTag: 0.2.2-stag
+- name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
+  newName: xiilab/uyuni-manager-noti
+  newTag: 0.2.2-stag
+- name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
+  newName: xiilab/uyuni-suite-frontendd
+  newTag: 0.2.1-stag
