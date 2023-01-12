@@ -12,9 +12,9 @@ spec:
         app: uyuni-manager-core
     spec:
       hostAliases:
-      - ip: "192.168.2.150"
+      - ip: "10.10.15.119"
         hostnames:
-        - "dev.uyuni-suite.xiilab.com"
+        - "gpu.seoultech.ac.kr"
       containers:
       - name: uyuni-manager-core
         env:
@@ -23,10 +23,16 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://dev.uyuni-suite.xiilab.com/auth
+          value: http://gpu.seoultech.ac.kr:32080/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE
-          value: uyuni-suite-develop
+          value: uyuni-suite
         - name: UYUNIHOST
-          value: 192.168.2.141
+          value: 10.10.15.119
+      nodeSelector:
+        kubernetes.io/hostname: gpu-mgmt
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"

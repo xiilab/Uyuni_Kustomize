@@ -1,4 +1,4 @@
 - op: replace
   path: /spec/rules/0/host
-  value: dev.uyuni-suite.xiilab.com
+  value: gpu.seoultech.ac.kr
 

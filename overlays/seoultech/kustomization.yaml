@@ -1,24 +1,29 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: uyuni-suite-develop
+namespace: uyuni-suite
 
 resources:
 - ../../base/deployments
 - ../../base/services
 - ../../base/configmaps
-- ../../base/secrets
 - volumes
 
 secretGenerator:
 - files:
   - config
   name: kube-config
+- files:
+  - .dockerconfigjson
+  name: regcred
+  type: kubernetes.io/dockerconfigjson
 
 patchesStrategicMerge:
 - core-deployment-env.yaml
 - batch-deployment-env.yaml
 - noti-deployment-env.yaml
+- frontend-deployment-env.yaml
+- mariadb-deployment-env.yaml
 
 patchesJson6902:
 - path: ingress-patch.yaml
@@ -37,5 +42,5 @@ images:
   newName: xiilab/uyuni-manager-noti
   newTag: 0.2.2-stag
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newName: xiilab/uyuni-suite-frontendd
-  newTag: 0.2.1-stag
+  newName: xiilab/uyuni-suite-frontend
+  newTag: 0.2.15-stag

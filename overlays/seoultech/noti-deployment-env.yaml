@@ -20,3 +20,9 @@ spec:
           value: kafka-cp-kafka.kafka.svc:9092
         - name: SPRING_KAFKA_PRODUCER_BOOTSTRAP-SERVERS
           value: kafka-cp-kafka.kafka.svc:9092
+      nodeSelector:
+        kubernetes.io/hostname: gpu-mgmt
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"

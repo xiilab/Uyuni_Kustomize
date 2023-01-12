@@ -3,7 +3,7 @@ kind : PersistentVolumeClaim
 metadata:
   name: uyuni-pvc
 spec:
-  storageClassName: uyuni-suite
+  storageClassName: nfs-client
   accessModes:
     - ReadWriteMany
   resources:
