@@ -38,4 +38,4 @@ images:
   newTag: 0.558-dev
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newTag: 0.475-dev
+  newTag: 0.476-dev
