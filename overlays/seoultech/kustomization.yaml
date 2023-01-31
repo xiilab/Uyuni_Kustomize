@@ -13,10 +13,6 @@ secretGenerator:
 - files:
   - config
   name: kube-config
-- files:
-  - .dockerconfigjson
-  name: regcred
-  type: kubernetes.io/dockerconfigjson
 
 patchesStrategicMerge:
 - core-deployment-env.yaml

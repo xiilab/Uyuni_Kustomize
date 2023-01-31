@@ -14,10 +14,6 @@ secretGenerator:
   - config
   name: kube-config
 - files:
-  - .dockerconfigjson
-  name: regcred
-  type: kubernetes.io/dockerconfigjson
-- files:
   - tls.crt=tls/unified.bigdata-car.kr.crt
   - tls.key=tls/key.unencrypted.pem
   name: bigdata-tls
