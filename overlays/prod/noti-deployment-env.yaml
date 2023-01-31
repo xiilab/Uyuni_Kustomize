@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-manager-noti
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-manager-noti
+  template:
+    metadata:
+      labels:
+        app: uyuni-manager-noti
+    spec:
+      containers:
+      - name: uyuni-manager-noti
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: dev
+        - name: SPRING_KAFKA_CONSUMER_BOOTSTRAP-SERVERS
+          value: kafka-cp-kafka.kafka.svc:9092
+        - name: SPRING_KAFKA_PRODUCER_BOOTSTRAP-SERVERS
+          value: kafka-cp-kafka.kafka.svc:9092

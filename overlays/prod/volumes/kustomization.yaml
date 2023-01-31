@@ -1,0 +1,3 @@
+resources:
+  - uyuni-suite-pv.yaml
+  - uyuni-suite-pvc.yaml
