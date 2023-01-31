@@ -1,0 +1,10 @@
+{
+  "auths": {
+    "harbor.xiilab.com": {
+      "username": "moonsub",
+      "password": "2eGL6uJEQRDfcpZKNOAIO2aoaosNT5jt",
+      "email": "m.kwon@xiilab.com",
+      "auth": "bW9vbnN1YjoyZUdMNnVKRVFSRGZjcFpLTk9BSU8yYW9hb3NOVDVqdA=="
+    }
+  }
+}

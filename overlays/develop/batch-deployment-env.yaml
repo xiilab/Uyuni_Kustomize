@@ -28,3 +28,5 @@ spec:
           value: uyuni
         - name: K8S_NAMESPACE
           value: uyuni-suite-develop
+      imagePullSecrets:
+      - name: regcred

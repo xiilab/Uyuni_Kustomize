@@ -34,8 +34,6 @@ spec:
         - name: kube-config
           mountPath: "/root/.kube"
           readOnly: true
-      imagePullSecrets:
-      - name: regcred
       volumes:
       - name: kube-config
         secret:

@@ -30,3 +30,5 @@ spec:
           value: uyuni-suite-develop
         - name: UYUNIHOST
           value: 192.168.2.141
+      imagePullSecrets:
+      - name: regcred

@@ -7,18 +7,22 @@ resources:
 - ../../base/deployments
 - ../../base/services
 - ../../base/configmaps
-- ../../base/secrets
 - volumes
 
 secretGenerator:
 - files:
   - config
   name: kube-config
+- files:
+  - .dockerconfigjson
+  name: regcred
+  type: kubernetes.io/dockerconfigjson
 
 patchesStrategicMerge:
 - core-deployment-env.yaml
 - batch-deployment-env.yaml
 - noti-deployment-env.yaml
+- frontend-deployment-env.yaml
 
 patchesJson6902:
 - path: ingress-patch.yaml

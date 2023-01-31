@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uyuni-suite-frontend
+spec:
+  selector:
+    matchLabels:
+      app: uyuni-suite-frontend
+  template:
+    metadata:
+      labels:
+        app: uyuni-suite-frontend
+    spec:
+      imagePullSecrets:
+      - name: regcred

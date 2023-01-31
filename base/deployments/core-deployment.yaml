@@ -36,8 +36,6 @@ spec:
           readOnly: true
         - name: uyuni-pvc
           mountPath: "/root/uyuni"
-      imagePullSecrets:
-      - name: regcred
       volumes:
       - name: kube-config
         secret:
