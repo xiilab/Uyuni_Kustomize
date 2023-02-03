@@ -19,7 +19,7 @@ secretGenerator:
   type: kubernetes.io/dockerconfigjson
 
 configMapGenerator:
-  - name: mig-configMap
+  - name: migconfigmap
     files:
       - ./MigProfile.json
 
