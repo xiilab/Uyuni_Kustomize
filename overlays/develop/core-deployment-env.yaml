@@ -33,7 +33,7 @@ spec:
         - name: mig-profile-path
           value: /root/migProfile.json
         volumeMounts:
-          - mountPath: '/root/migProfile.json'
+          - mountPath: '/root'
             name: migprofilevolume
       imagePullSecrets:
       - name: regcred
