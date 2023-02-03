@@ -14,7 +14,7 @@ spec:
       hostAliases:
       - ip: "10.10.15.119"
         hostnames:
-        - "gpu.seoultech.ac.kr"
+        - "gfarm.seoultech.ac.kr"
       containers:
       - name: uyuni-manager-batch
         env:
@@ -23,7 +23,7 @@ spec:
         - name: KEYCLOAK_REALM
           value: uyuni
         - name: KEYCLOAK_AUTHSERVERURL
-          value: http://gpu.seoultech.ac.kr:32080/auth
+          value: http://gfarm.seoultech.ac.kr/auth
         - name: KEYCLOAK_RESOURCE
           value: uyuni
         - name: K8S_NAMESPACE

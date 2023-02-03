@@ -11,5 +11,5 @@ spec:
   storageClassName: uyuni-suite
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    path: /root/uyuni-data
+    path: /root/uyuni-storage/uyuni-data
     server: 192.168.1.11
