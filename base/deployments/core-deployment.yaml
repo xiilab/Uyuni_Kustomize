@@ -30,12 +30,17 @@ spec:
             port: 8080
           initialDelaySeconds: 10
           periodSeconds: 5
+        env:
+        - name: mig-profile-path
+          value: /root/migProfile/migProfile.json
         volumeMounts:
         - name: kube-config
           mountPath: "/root/.kube"
           readOnly: true
         - name: uyuni-pvc
           mountPath: "/root/uyuni"
+        - name: migprofilevolume
+          mountPath: '/root/migProfile'
       volumes:
       - name: kube-config
         secret:
@@ -43,3 +48,6 @@ spec:
       - name: uyuni-pvc
         persistentVolumeClaim:
           claimName: uyuni-pvc
+      - name: migprofilevolume
+        configMap:
+          name: migconfigmap

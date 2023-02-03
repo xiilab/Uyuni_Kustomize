@@ -4,3 +4,8 @@ resources:
   - core-deployment.yaml
   - batch-deployment.yaml
   - noti-deployment.yaml
+
+configMapGenerator:
+  - name: migconfigmap
+    files:
+      - ./MigProfile.json
