@@ -18,6 +18,11 @@ secretGenerator:
   name: regcred
   type: kubernetes.io/dockerconfigjson
 
+configMapGenerator:
+  - name: mig-configMap
+    files:
+      - ./MigProfile.json
+
 patchesStrategicMerge:
 - core-deployment-env.yaml
 - batch-deployment-env.yaml

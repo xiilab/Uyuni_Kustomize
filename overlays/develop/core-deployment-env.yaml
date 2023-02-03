@@ -30,5 +30,14 @@ spec:
           value: uyuni-suite-develop
         - name: UYUNIHOST
           value: 192.168.2.141
+        - name: mig-profile-path
+          value: /root/migProfile.json
+        volumeMounts:
+          - mountPath: '/root/migProfile.json'
+            name: mig-profile-volume
       imagePullSecrets:
       - name: regcred
+      volumes:
+      - name: mig-profile-volume
+        configMap:
+          name: mig-configMap
