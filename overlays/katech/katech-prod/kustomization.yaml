@@ -48,7 +48,7 @@ images:
   newTag: 0.90-katech
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: xiilab/uyuni-suite-frontend
-  newTag: 0.141-katech
+  newTag: 0.142-katech
 - name: xiilab/katech-postgres-daemon:latest
   newName: xiilab/katech-postgres-daemon
   newTag: "0.8"
