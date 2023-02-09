@@ -13,3 +13,16 @@ spec:
     spec:
       imagePullSecrets:
       - name: regcred
+      containers:
+      - name: uyuni-suite-frontend
+        env:
+        - name: REACT_APP_KEYCLOAK_REALM
+          value: uyuni
+        - name: REACT_APP_KEYCLOAK_CLIENT_ID
+          value: uyuni
+        - name: REACT_APP_KEYCLOAK_URL
+          value: http://dev.uyuni-suite.xiilab.com/auth/
+        - name: REACT_APP_KEYCLOAK_HOST
+          value: http://dev.uyuni-suite.xiilab.com/
+        - name: REACT_APP_BASE_URL
+          value: http://dev.uyuni-suite.xiilab.com
