@@ -21,4 +21,4 @@ spec:
         - name: REACT_APP_KEYCLOAK_CLIENT_ID
           value: uyuni
         - name: REACT_APP_KEYCLOAK_URL
-          value: http://uyuni-suite.xiilab.com:32080/auth
+          value: http://uyuni-suite.xiilab.com:40080/auth
