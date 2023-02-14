@@ -20,12 +20,6 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev
-        - name: KEYCLOAK_REALM
-          value: uyuni
-        - name: KEYCLOAK_AUTHSERVERURL
-          value: http://uyuni-suite.xiilab.com:32080/auth
-        - name: KEYCLOAK_RESOURCE
-          value: uyuni
         - name: K8S_NAMESPACE
           value: uyuni-suite
       imagePullSecrets:
