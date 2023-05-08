@@ -36,6 +36,15 @@ spec:
             name: uyuni-manager-core
             port:
               number: 8080
+              
+      - pathType: Prefix
+        path: "/api/v1/mananger/api-url"
+        backend:
+          service:
+            name: uyuni-manager-core
+            port:
+              number: 8080
+              
       - pathType: Prefix
         path: "/api/v1/noti"
         backend:
