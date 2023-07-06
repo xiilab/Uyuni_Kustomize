@@ -18,5 +18,11 @@ spec:
           value: dev
         - name: K8S_NAMESPACE
           value: uyuni-suite
+        - name: KEYCLOAK_REALM
+          value: uyuni
+        - name: KEYCLOAK_AUTHSERVERURL
+          value: http://uyuni-suite.xiilab.com:32080/auth
+        - name: KEYCLOAK_RESOURCE
+          value: uyuni
       imagePullSecrets:
       - name: regcred
