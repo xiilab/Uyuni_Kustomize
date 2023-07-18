@@ -36,4 +36,4 @@ images:
   newTag: 0.4.60-stag
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
-  newTag: 0.4.77-stag
+  newTag: 0.4.78-stag
