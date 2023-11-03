@@ -20,5 +20,7 @@ spec:
           value: uyuni
         - name: REACT_APP_KEYCLOAK_REALM
           value: uyuni
+        - name: REACT_APP_BACKEND_HOST
+          value: http://dev.uyuni-suite.xiilab.com/auth
       imagePullSecrets:
       - name: regcred
