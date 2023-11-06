@@ -33,13 +33,13 @@ patchesJson6902:
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
   newName: xiilab/uyuni-manager-batch
-  newTag: 0.9-katech-release-0.5
+  newTag: 0.10-katech-release-0.5
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
   newName: xiilab/uyuni-manager-core
-  newTag: 0.9-katech-release-0.5
+  newTag: 0.10-katech-release-0.5
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
   newName: xiilab/uyuni-manager-noti
-  newTag: 0.9-katech-release-0.5
+  newTag: 0.10-katech-release-0.5
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: xiilab/uyuni-suite-frontend
   newTag: 0.9-katech-0.5
