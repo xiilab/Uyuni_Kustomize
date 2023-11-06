@@ -42,4 +42,4 @@ images:
   newTag: 0.3-katech-release-0.5
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: xiilab/uyuni-suite-frontend
-  newTag: 0.7-katech-0.5
+  newTag: 0.9-katech-0.5
