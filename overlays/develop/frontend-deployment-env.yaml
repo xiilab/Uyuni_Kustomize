@@ -15,12 +15,12 @@ spec:
       - name: uyuni-suite-frontend
         env:
         - name: REACT_APP_KEYCLOAK_URL
-          value: http://dev.uyuni-suite.xiilab.com/auth
+          value: http://211.218.247.36:23080/auth
         - name: REACT_APP_KEYCLOAK_CLIENT_ID
           value: uyuni
         - name: REACT_APP_KEYCLOAK_REALM
           value: uyuni
         - name: REACT_APP_BACKEND_HOST
-          value: http://dev.uyuni-suite.xiilab.com
+          value: http://211.218.247.36:23080
       imagePullSecrets:
       - name: regcred
