@@ -32,14 +32,14 @@ patchesJson6902:
 
 images:
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
-  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-batch
-  newTag: 0.925-dev
+  newName: xiilab/uyuni-manager-batch
+  newTag: 0.5.41-stag
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
-  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-core
-  newTag: 0.925-dev
+  newName: xiilab/uyuni-manager-core
+  newTag: 0.5.41-stag
 - name: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
-  newName: harbor.xiilab.com/uyuni-suite/uyuni-manager-noti
-  newTag: 0.925-dev
+  newName: xiilab/uyuni-manager-noti
+  newTag: 0.5.41-stag
 - name: harbor.xiilab.com/uyuni-suite/uyuni-suite-frontend
   newName: xiilab/uyuni-suite-frontend
-  newTag: 0.12-katech-0.5
+  newTag: 0.13-katech-0.5
