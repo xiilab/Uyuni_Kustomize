@@ -12,8 +12,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "uyuni-suite.xiilab.com"
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: "/auth"
